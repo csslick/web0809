@@ -4,6 +4,11 @@ function insertDom(url){
         dataType: 'html',
         success: function(data){
             $('#root').append(data);
+
+            var time = url
+                        .replace('docs/', '')
+                        .replace('.html', '');
+            $('.time').last().html(time);
         }
     }).fail(function(){throw 'load error!!'})
 }
@@ -19,6 +24,6 @@ $(function(){
 
     docs.map(function(doc){
         console.log(doc.url);
-        insertDom(doc.url)
+        insertDom(doc.url);
     })
 })
