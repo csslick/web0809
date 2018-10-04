@@ -2,14 +2,17 @@ function insertDom(url){
     $.ajax({
         url: url,
         dataType: 'html',
+        // async: false,
         success: function(data){
-            $('#root').append(data);
+            if(data != null){
+                $('#root').append(data);
 
-            // 문서 날짜 정보(파일명 참조)
-            var time = url
-                        .replace('docs/', '')
-                        .replace('.html', '');
-            $('.time').last().html(time);
+                // 문서 날짜 정보(파일명 참조)
+                var time = url
+                            .replace('docs/', '')
+                            .replace('.html', '');
+                $('.time').last().html(time);
+            }
         }
     }).fail(function(){throw 'load error!!'})
 }
@@ -18,6 +21,7 @@ $(function(){
     var docs = [
         { url: 'templates/header.html' },
         /*** add here... ***/
+        { url: 'docs/2018-10-04.html' }, // 1차평가: 의사소통능력
         { url: 'docs/2018-09-27a.html' }, // 의사소통능력
         { url: 'docs/2018-09-27.html' }, // 자기소개서
         { url: 'docs/2018-09-26.html' }, // 웹 디자인이란
@@ -27,4 +31,8 @@ $(function(){
         console.log(doc.url);
         insertDom(doc.url);
     })
+    // $.each(docs, function(i, data){
+    //     console.log(data.url);
+    //     insertDom(data.url);
+    // })
 })
