@@ -21,6 +21,7 @@ $(function(){
     var docs = [
         { url: 'templates/header.html' },
         /*** add here... ***/
+        { url: 'docs/2018-10-06_04-11.html' }, // 나비 자르기
         { url: 'docs/2018-10-06.html' }, // 포토샵 서울타워 광고 페이지
         { url: 'docs/2018-10-05.html' }, // 포토샵 제품 이미지 합성
         { url: 'docs/2018-10-04.html' }, // 1차평가: 의사소통능력
