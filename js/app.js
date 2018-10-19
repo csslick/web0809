@@ -22,6 +22,7 @@ $(function(){
         { url: 'templates/header.html' },
         /*** add here... ***/
         // { url: 'docs/2018-10-15a.html' }, // 포스터
+        { url: 'docs/2018-10-19.html' }, // 페르소나 모델 
         { url: 'docs/2018-10-18.html' }, // 사무용 판매 쇼핑몰 분석
         { url: 'docs/2018-10-16.html' }, // 폰트 활용 타이틀
         { url: 'docs/2018-10-15b.html' }, // 적목현상 제거
